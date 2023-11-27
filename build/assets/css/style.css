@@ -3,14 +3,19 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
+  padding: none;
+  margin: none;
 }
 
 body {
+  width: 100%;
+  height: 100%;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -33,10 +38,11 @@ body::-webkit-scrollbar {
 .page-content {
   width: 100%;
   min-height: 93vh;
+  margin-right: 3vw;
 }
 
 .page-section {
-  border: solid 1px blue;
+  /* border: solid 1px blue; */
 }
 
 /* PAGE 1 */
@@ -79,7 +85,7 @@ body::-webkit-scrollbar {
 .page-1-layout > .page-section:nth-of-type(2) {
   flex-basis: 10%;
   padding-left: 5%;
-  font-size: 1.6rem;
+  font-size: 2.7rem;
   font-weight: 800;
   margin: 0 0 0.5% 0;
   color: #a4c639;
@@ -122,6 +128,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   position: relative;
+  justify-content: center;
 }
 
 .page-2-zone {
@@ -134,7 +141,7 @@ body::-webkit-scrollbar {
   /* flex-basis: 20%; */
   justify-content: start !important;
   padding-left: 5%;
-  font-size: 1.6rem;
+  font-size: 2.7rem;
   font-weight: 800;
   margin: 5% 0 5% 0;
   color: #a4c639;
@@ -150,8 +157,9 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
 }
-.page-2-zone:nth-of-type(2) > .page-section > div{
+.page-2-zone:nth-of-type(2) > .page-section > div {
   width: fit-content;
 }
 .page-2-zone:nth-of-type(3) {
@@ -160,8 +168,23 @@ body::-webkit-scrollbar {
 }
 .page-2-zone:nth-of-type(3) > .page-section {
   flex-basis: 33.33333333%;
+  color: white;
+  padding: 15px;
 }
-page-section
+ul {
+  list-style: none; /* Remove default bullets */
+}
+ul li {
+  margin-bottom: 10px;
+}
+ul li::before {
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #a4c639; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
 
 /* PAGE 3 */
 .page-3-layout {
@@ -169,13 +192,17 @@ page-section
   display: flex;
   flex-direction: column;
 }
-
 .page-3-zone:nth-of-type(1) {
-  flex-basis: 10%;
+  /* flex-basis: 20%; */
+  justify-content: start !important;
+  padding-left: 5%;
+  font-size: 2.7rem;
+  font-weight: 800;
+  margin: 5% 0 5% 0;
+  color: #a4c639;
 }
 
 .page-3-zone:nth-of-type(2) {
-  flex-basis: 90%;
   display: flex;
   flex-direction: column;
 }
@@ -187,11 +214,28 @@ page-section
 }
 
 #page-3-zone2a > .page-section:nth-of-type(1) {
-  flex-basis: 30%;
+  flex-basis: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #page-3-zone2a > .page-section:nth-of-type(2) {
-  flex-basis: 70%;
+  font-size: large;
+  flex-basis: 80%;
+  display: flex;
+  align-items: center;
+}
+.grey-box {
+  width: 50%;
+  aspect-ratio: 1;
+  background: rgba(1, 1, 1, 0.5);
+  color: #a4c639;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #page-3-zone2b {
@@ -201,39 +245,60 @@ page-section
 }
 
 #page-3-zone2b > .page-section:nth-of-type(1) {
-  flex-basis: 30%;
+  flex-basis: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #page-3-zone2b > .page-section:nth-of-type(2) {
-  flex-basis: 70%;
+  font-size: large;
+  flex-basis: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #page-3-zone2c {
+  margin-bottom: 2vw;
   width: 100%;
   display: flex;
   flex-direction: row;
 }
 
 #page-3-zone2c > .page-section:nth-of-type(1) {
-  flex-basis: 30%;
+  flex-basis: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #page-3-zone2c > .page-section:nth-of-type(2) {
-  flex-basis: 70%;
+  font-size: large;
+  flex-basis: 80%;
+  display: flex;
+  align-items: center;
 }
 
 #page-3-zone2d {
+  margin-bottom: 2vw;
   width: 100%;
   display: flex;
   flex-direction: row;
 }
 
 #page-3-zone2d > .page-section:nth-of-type(1) {
-  flex-basis: 30%;
+  flex-basis: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #page-3-zone2d > .page-section:nth-of-type(2) {
-  flex-basis: 70%;
+  font-size: large;
+  flex-basis: 80%;
+  display: flex;
+  align-items: center;
 }
 
 #piechartArea {
@@ -253,9 +318,24 @@ page-section
 #page4 {
   box-sizing: border-box;
 }
-
+#page-4-title {
+  padding-left: 5%;
+  font-size: 2.7rem;
+  font-weight: 800;
+  margin: 5% 0 2% 0;
+  color: #a4c639;
+}
+.product-group {
+  margin: 2% 5% 2% 5%;
+}
+.product-group-title {
+  font-size: 2rem;
+  font-weight: 500;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
 .responsive {
-  padding: 0 0.5%;
+  padding: 0 1% 1% 0;
   float: left;
   width: 19%;
 }
@@ -275,9 +355,10 @@ div.gallery img {
 }
 
 div.desc {
-  font-size: small;
+  font-size: large;
   padding: 5px;
   text-align: center;
+  border-bottom: solid 4px #a4c639;
 }
 
 @media only screen and (max-width: 700px) {
@@ -326,31 +407,40 @@ div.desc {
   }
 }
 
-
 /* CONTACT FOOTER */
 
-.contact-footer-wrapper{
-  margin-top: auto;
+.contact-footer-wrapper {
+  margin-top: 10vh;
   width: 100%;
   height: 40vh;
   display: flex;
   flex-direction: row;
 }
 
-.footer-map{
+.footer-map {
   width: 50%;
   height: 100%;
 }
 
 .footer-map > iframe {
-  filter: invert(90%) grayscale(1)
+  filter: invert(90%) grayscale(1);
 }
 
-.footer-contact{
+.footer-contact {
   padding: 0 3% 0 3%;
   width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+#footer-contact-tile {
+  font-size: 2.7rem;
+  font-weight: 800;
+  padding: 2% 0 2% 0;
+  color: #a4c639;
+}
+.footer-contact-item-label {
+  font-weight: bold;
 }
